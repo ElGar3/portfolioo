@@ -1,0 +1,196 @@
+/* From Uiverse.io by Jedi-hongbin */ 
+body{
+    background-color: #1b1b32;
+    color:#ededed;
+    
+    
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    padding: 30px 50px;
+    background: #1d1c1c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.navbar a{
+    position:relative;
+    font-size: 18px;
+    color:white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a::before{
+    content: '';
+    position:absolute;
+    top:100%;
+    left:0;
+    width:0%;
+    height:2px;
+    background:white;
+    transition: .4s;
+}
+.navbar a:hover::before{
+    width:100%;
+
+}
+.navbar a:hover,
+.navbar a.active{
+    color:#33A1FD;
+}
+
+/* Back button style */
+.header button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #33A1FD, #1b6de0);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(51, 161, 253, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.header button svg {
+  fill: white;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.header button:hover {
+  background: linear-gradient(135deg, #1b6de0, #33A1FD);
+  box-shadow: 0 10px 25px rgba(51, 161, 253, 0.8);
+  transform: translateY(-3px);
+}
+
+.header button:hover svg {
+  transform: translateX(-5px);
+}
+
+/* Optional: Add subtle focus style for accessibility */
+.header button:focus {
+  outline: 2px solid #33A1FD;
+  outline-offset: 3px;
+}
+
+   .garimg{
+    background-image: url('C:\Users\yassi\OneDrive\Bureau\gar.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:12%;
+    width:500px;
+    height:650px;
+
+   }
+   .projects-section {
+    padding: 100px 50px;
+    background: linear-gradient(#1b1b32, #111);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #33A1FD;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* exactly 2 columns */
+    gap: 30px;
+    justify-content: center;
+}
+
+
+.project-card {
+    background-color: #2f363e;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #33A1FD;
+}
+
+.project-card video {
+    width: 300px; /* smaller fixed width */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+.project-card h3 {
+    color: #33A1FD;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.floating-icons .shortcut {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(231, 235, 17, 0.05);
+    animation: floatLeft linear infinite;
+    white-space: nowrap;
+}
+
+/* Random animation durations and delays for natural feel */
+.floating-icons .shortcut:nth-child(1) { top: 10%; left: 100%; animation-duration: 25s; animation-delay: 0s; }
+.floating-icons .shortcut:nth-child(2) { top: 20%; left: 110%; animation-duration: 30s; animation-delay: 5s; }
+.floating-icons .shortcut:nth-child(3) { top: 35%; left: 105%; animation-duration: 35s; animation-delay: 10s; }
+.floating-icons .shortcut:nth-child(4) { top: 50%; left: 120%; animation-duration: 40s; animation-delay: 15s; }
+.floating-icons .shortcut:nth-child(5) { top: 65%; left: 115%; animation-duration: 33s; animation-delay: 7s; }
+.floating-icons .shortcut:nth-child(6) { top: 75%; left: 108%; animation-duration: 28s; animation-delay: 12s; }
+.floating-icons .shortcut:nth-child(7) { top: 85%; left: 112%; animation-duration: 37s; animation-delay: 4s; }
+.floating-icons .shortcut:nth-child(8) { top: 30%; left: 102%; animation-duration: 42s; animation-delay: 3s; }
+.floating-icons .shortcut:nth-child(9) { top: 60%; left: 118%; animation-duration: 45s; animation-delay: 6s; }
+.floating-icons .shortcut:nth-child(10) { top: 15%; left: 109%; animation-duration: 39s; animation-delay: 2s; }
+
+@keyframes floatLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150vw);
+    }
+}
+
